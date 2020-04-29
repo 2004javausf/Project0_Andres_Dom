@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import com.revature.driver.MainMenuClass;
 import com.revature.form.CustomerForm;
+import com.revature.service.LogIn;
 
 public class CustomerMenu {
 	
@@ -26,7 +27,7 @@ public class CustomerMenu {
 		CustomerForm.UserPrompt();
 		
 	}else if (choice ==2) {
-		//we call to the LogIn method
+		LogIn.logInValidation();
 	}else if (choice ==3) {
 		MainMenuClass.mainMenuClass();
 	}

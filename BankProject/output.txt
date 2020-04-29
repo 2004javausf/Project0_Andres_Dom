@@ -1,1 +1,0 @@
-Customer Information [customerName=Dom, address=Florida, phoneNumber=305222555, userName=domdom, password=147852, accountType=null, accStatus=null]
