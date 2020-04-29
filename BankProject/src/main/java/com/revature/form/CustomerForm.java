@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.revature.beans.Customer;
-import com.revature.menu.EmployeeMenu;
+import com.revature.menu.CustomerMenu;
 
 public class CustomerForm {
 	
@@ -81,7 +81,7 @@ public class CustomerForm {
 				System.out.println("Sorry we are in maintainance");
 			break;
 			case "3": 
-				EmployeeMenu.employeeMenu();
+				CustomerMenu.customerMenuMethod();
 			break;
 			}
 			

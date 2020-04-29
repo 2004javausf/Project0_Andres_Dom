@@ -1,1 +1,1 @@
-Customer Information [customerName=ffff, address=ffff, phoneNumber=ffff, userName=frrr, password=ffff, accountType=null, accStatus=null]
+Customer Information [customerName=Dom, address=Florida, phoneNumber=305222555, userName=domdom, password=147852, accountType=null, accStatus=null]

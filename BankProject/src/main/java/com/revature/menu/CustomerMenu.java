@@ -2,6 +2,7 @@ package com.revature.menu;
 
 import java.util.Scanner;
 
+import com.revature.driver.MainMenuClass;
 import com.revature.form.CustomerForm;
 
 public class CustomerMenu {
@@ -17,6 +18,7 @@ public class CustomerMenu {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("[1] If you are a New Costumer");
 		System.out.println("[2] If you want to Log In");
+		System.out.println("[3] If you want to go back");
 		int choice= sc.nextInt();
 	
 	
@@ -25,6 +27,8 @@ public class CustomerMenu {
 		
 	}else if (choice ==2) {
 		//we call to the LogIn method
+	}else if (choice ==3) {
+		MainMenuClass.mainMenuClass();
 	}
 	
 	}

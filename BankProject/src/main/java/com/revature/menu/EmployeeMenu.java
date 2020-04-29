@@ -2,6 +2,8 @@ package com.revature.menu;
 
 import java.util.Scanner;
 
+import com.revature.beans.Admin;
+
 public class EmployeeMenu {
 	//this is father class to Admin
 	public static void employeeMenu() {
@@ -22,7 +24,12 @@ public class EmployeeMenu {
 		System.out.println("Please log in with your username?");
 		System.out.println("Please enter your password?");
 	}else if (choice ==2) {
-		//we call to the LogIn method
+		try {
+			Admin.readCustomers();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 		
 	}
