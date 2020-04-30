@@ -16,6 +16,7 @@ public class Customer implements Serializable  {
 	private String accountType;
 	private String accStatus;
 	private String address;
+	
 
 	
 	public void customer(){

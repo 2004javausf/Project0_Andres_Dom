@@ -17,10 +17,10 @@ public class CustomerForm {
 		 * userName; private String password; private String accountType; private String
 		 * accStatus;
 		 */
-	public static ArrayList<Customer> signUpForm = new ArrayList<Customer>();
+		
 		@SuppressWarnings("resource")
 		public static void UserPrompt() {
-			
+			ArrayList<Customer> signUpForm = new ArrayList<Customer>();
 			Customer userValues = new Customer();
 			Scanner scan = new Scanner(System.in);
 			

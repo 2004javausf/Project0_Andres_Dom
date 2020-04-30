@@ -6,6 +6,7 @@ import com.revature.driver.MainMenuClass;
 import com.revature.form.CustomerForm;
 import com.revature.service.LogIn;
 
+
 public class CustomerMenu {
 	
 	public static void customerMenuMethod() {
@@ -27,7 +28,7 @@ public class CustomerMenu {
 		CustomerForm.UserPrompt();
 		
 	}else if (choice ==2) {
-		LogIn.logInValidation();
+		LogIn.logInValidation(null);
 	}else if (choice ==3) {
 		MainMenuClass.mainMenuClass();
 	}

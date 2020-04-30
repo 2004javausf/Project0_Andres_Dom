@@ -21,8 +21,14 @@ public class EmployeeMenu {
 	
 	
 	if(choice ==1) {
-		System.out.println("Please log in with your username?");
-		System.out.println("Please enter your password?");
+		//System.out.println("Please log in with your username?");
+		//System.out.println("Please enter your password?");
+		try {
+			Admin.readCustomers();
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}else if (choice ==2) {
 		try {
 			Admin.readCustomers();
