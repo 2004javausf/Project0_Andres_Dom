@@ -6,7 +6,7 @@ import java.util.Scanner;
 import com.revature.beans.Customer;
 
 public class LogIn {
-	public static ArrayList<Customer> signUpForm = new ArrayList<Customer>();
+	
 	//public static final String cutomerFile = "output.txt";
 	public static void logInValidation(ArrayList<Customer> a) {
 	

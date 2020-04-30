@@ -1,15 +1,17 @@
 package com.revature.form;
 
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.revature.beans.Customer;
+import com.revature.menu.AdminMenu;
 import com.revature.menu.CustomerMenu;
 
 public class CustomerForm {
-	
+	public static ArrayList<Customer> signUpForm = new ArrayList<Customer>();
 	//Establish method to call UserLogin() to identify if it is a Login or SignUp
 		
 		/*
@@ -20,7 +22,7 @@ public class CustomerForm {
 		
 		@SuppressWarnings("resource")
 		public static void UserPrompt() {
-			ArrayList<Customer> signUpForm = new ArrayList<Customer>();
+			//ArrayList<Customer> signUpForm = new ArrayList<Customer>();
 			Customer userValues = new Customer();
 			Scanner scan = new Scanner(System.in);
 			
@@ -59,6 +61,10 @@ public class CustomerForm {
 				String password = scan.next();
 				userValues.setPassword(password);
 				
+				 // System.out.println("=================================================");
+				//System.out.println("Thank you, Wait for your account to be approved.");
+				//System.out.println("=================================================");
+				
 				
 				//add account info to ArrayList
 				signUpForm.add(userValues);//we added the java bean to an ArrayList
@@ -66,10 +72,18 @@ public class CustomerForm {
 				for (int i = 0; i < signUpForm.size(); i++)  {
 		            System.out.print(signUpForm.get(i) + " ");         
 				}
-		            
-		           // System.out.println("=================================================");
-					//System.out.println("Thank you, Wait for your account to be approved.");
-					//System.out.println("=================================================");
+				/*
+				//read File
+				try {
+					AdminMenu.readToFile();
+				} catch (FileNotFoundException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				} catch (IOException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}*/
+		          
 				
 			
 			break;
@@ -89,7 +103,7 @@ public class CustomerForm {
 			
 			FileWriter writer = null;
 			try {
-				writer = new FileWriter("output.txt");
+				writer = new FileWriter("costumerInfo.txt");
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

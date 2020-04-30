@@ -24,14 +24,15 @@ public class EmployeeMenu {
 		//System.out.println("Please log in with your username?");
 		//System.out.println("Please enter your password?");
 		try {
-			Admin.readCustomers();
+			//AdminMenu.manageCustomers();
+			AdminMenu.readToFile();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}else if (choice ==2) {
 		try {
-			Admin.readCustomers();
+			AdminMenu.manageCustomers();
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

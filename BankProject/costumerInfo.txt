@@ -1,0 +1,1 @@
+Customer Information [customerName=fara, address=tunez, phoneNumber=325, userName=223, password=223, accountType=null, accStatus=null]

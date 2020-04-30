@@ -2,12 +2,16 @@ package com.revature.beans;
 
 import java.io.Serializable;
 
+import com.revature.menu.AdminMenu;
+import com.revature.service.FindCustomer;
+
 //import com.revature.util.FileStuff;
 //import com.revature.util.Roster;
 
 public class Customer implements Serializable  {
 	
 	private static final long serialVersionUID = 7860983731751619324L;
+
 	
 	private String customerName;
 	private String phoneNumber;
@@ -19,14 +23,15 @@ public class Customer implements Serializable  {
 	
 
 	
-	public void customer(){
-		//super();
-		//Roster.warriorList.add(this);
-		//FileStuff.writeCustomerFile(Roster.warriorList);
+	public void profileInfo(){
+		
+		FindCustomer.signUpForm.add(this);
+		AdminMenu.writeToFile(FindCustomer.signUpForm);
 	}
 	
 	public void profileInfo(String customerName, String address, String phoneNumber, String userName, 
 			String password, String accountType, String accStatus) {
+		
 		this.customerName=customerName;
 		this.address=address;
 		this.phoneNumber=phoneNumber;
@@ -34,8 +39,8 @@ public class Customer implements Serializable  {
 		this.password=password;
 		this.accountType=accountType;
 		this.accStatus=accStatus;
-		//Roster.warriorList.add(this);
-		//FileStuff.writeWarriorFile(Roster.warriorList);
+		FindCustomer.signUpForm.add(this);
+		AdminMenu.writeToFile(FindCustomer.signUpForm);
 	}
 
 	public String getCustomerName() {
