@@ -1,1 +1,2 @@
-Customer Information [customerName=fara, address=tunez, phoneNumber=325, userName=223, password=223, accountType=null, accStatus=null]
+Customer Information [customerName=Andres, address=Miami, phoneNumber=3054679581, userName=andresap, password=12345, accStatus=false]
+ a p p r o v e d   a c c o u n t

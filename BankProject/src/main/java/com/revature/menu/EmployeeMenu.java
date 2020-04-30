@@ -3,6 +3,7 @@ package com.revature.menu;
 import java.util.Scanner;
 
 import com.revature.beans.Admin;
+import com.revature.driver.MainMenuClass;
 
 public class EmployeeMenu {
 	//this is father class to Admin
@@ -17,6 +18,7 @@ public class EmployeeMenu {
 		Scanner sc = new Scanner(System.in);
 		System.out.println("[1] If you are an Employee");
 		System.out.println("[2] If you are an Admin");
+		System.out.println("[3] To go back");
 		int choice= sc.nextInt();
 	
 	
@@ -37,7 +39,10 @@ public class EmployeeMenu {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
+	}else if (choice ==3) {
+
+    	MainMenuClass.mainMenuClass();
+    }
 		
 	}
 }

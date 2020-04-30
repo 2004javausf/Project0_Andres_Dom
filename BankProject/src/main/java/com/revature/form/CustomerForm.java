@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import com.revature.beans.Customer;
+import com.revature.driver.MainMenuClass;
 import com.revature.menu.AdminMenu;
 import com.revature.menu.CustomerMenu;
 
@@ -61,17 +62,24 @@ public class CustomerForm {
 				String password = scan.next();
 				userValues.setPassword(password);
 				
-				 // System.out.println("=================================================");
-				//System.out.println("Thank you, Wait for your account to be approved.");
-				//System.out.println("=================================================");
+				System.out.println("Insert password: ");
+				boolean value = false;
+				userValues.setAccStatus(value);
+				
 				
 				
 				//add account info to ArrayList
 				signUpForm.add(userValues);//we added the java bean to an ArrayList
 			
 				for (int i = 0; i < signUpForm.size(); i++)  {
-		            System.out.print(signUpForm.get(i) + " ");         
+		            System.out.println(signUpForm.get(i) + " ");         
 				}
+				System.out.println(userValues.getUserName() + " ");
+				System.out.println("=================================================");
+				System.out.println("Thank you, Wait for your account to be approved.");
+				System.out.println("=================================================");
+				
+				
 				/*
 				//read File
 				try {
@@ -84,20 +92,26 @@ public class CustomerForm {
 					e1.printStackTrace();
 				}*/
 		          
-				
 			
 			break;
 			
-				
-				
-				
 			case "2": 
 				System.out.println("Sorry we are in maintainance");
 			break;
 			case "3": 
 				CustomerMenu.customerMenuMethod();
 			break;
+			
+			default:
+				
 			}
+			
+			System.out.println("Press 1 to go to Main Menu");
+	        Scanner op = new Scanner (System.in);
+	        int input = op.nextInt();
+	        if (input == 1) {
+	        	MainMenuClass.mainMenuClass();
+	        }
 			
 			//creating folder to store arraList information
 			

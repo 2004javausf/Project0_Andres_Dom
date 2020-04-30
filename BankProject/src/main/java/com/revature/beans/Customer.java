@@ -18,7 +18,7 @@ public class Customer implements Serializable  {
 	private String userName;
 	private String password;
 	private String accountType;
-	private String accStatus;
+	private Boolean accStatus;
 	private String address;
 	
 
@@ -26,11 +26,11 @@ public class Customer implements Serializable  {
 	public void profileInfo(){
 		
 		FindCustomer.signUpForm.add(this);
-		AdminMenu.writeToFile(FindCustomer.signUpForm);
+		//AdminMenu.writeToFile(FindCustomer.signUpForm);
 	}
 	
 	public void profileInfo(String customerName, String address, String phoneNumber, String userName, 
-			String password, String accountType, String accStatus) {
+			String password, String accountType, Boolean accStatus) {
 		
 		this.customerName=customerName;
 		this.address=address;
@@ -40,7 +40,7 @@ public class Customer implements Serializable  {
 		this.accountType=accountType;
 		this.accStatus=accStatus;
 		FindCustomer.signUpForm.add(this);
-		AdminMenu.writeToFile(FindCustomer.signUpForm);
+		//AdminMenu.writeToFile(FindCustomer.signUpForm);
 	}
 
 	public String getCustomerName() {
@@ -91,18 +91,18 @@ public class Customer implements Serializable  {
 		this.accountType = accountType;
 	}
 
-	public String getAccStatus() {
+	public Boolean getAccStatus() {
 		return accStatus;
 	}
 
-	public void setAccStatus(String accStatus) {
+	public void setAccStatus(Boolean accStatus) {
 		this.accStatus = accStatus;
 	}
 
 	@Override
 	public String toString() {
 		return "Customer Information [customerName=" + customerName + ", address=" + address + ", phoneNumber=" + phoneNumber + ", userName=" + userName
-				+ ", password=" + password + ", accountType=" + accountType + ", accStatus=" + accStatus + "]";
+				+ ", password=" + password + ", accStatus=" + accStatus + "]";
 	}
 	
 		
