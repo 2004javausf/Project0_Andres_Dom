@@ -1,5 +1,6 @@
 package com.revature.beans;
 
+import java.io.IOException;
 import java.io.Serializable;
 
 import com.revature.menu.AdminMenu;
@@ -18,7 +19,7 @@ public class Customer implements Serializable  {
 	private String userName;
 	private String password;
 	private String accountType;
-	private String accStatus;
+	private Boolean accStatus;
 	private String address;
 	private String accNumber;
 	private double initialDeposit;
@@ -28,12 +29,17 @@ public class Customer implements Serializable  {
 	
 	public void profileInfo(){
 		
-		FindCustomer.signUpForm.add(this);
-		AdminMenu.writeToFile(FindCustomer.signUpForm);
+		/*FindCustomer.signUpForm.add(this);
+		try {
+			AdminMenu.writeToFile(FindCustomer.signUpForm);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 	}
 	
 	public void profileInfo(String customerName, String address, String phoneNumber, String userName, 
-			String password, String accountType, String accStatus, String accNumber, double initialDeposit, double balance) {
+			String password, String accountType, Boolean accStatus, String accNumber, double initialDeposit, double balance) {
 		
 		this.customerName=customerName;
 		this.address=address;
@@ -46,8 +52,13 @@ public class Customer implements Serializable  {
 		this.initialDeposit=initialDeposit;
 		this.balance=initialDeposit;
 		
-		FindCustomer.signUpForm.add(this);
-		AdminMenu.writeToFile(FindCustomer.signUpForm);
+		/*FindCustomer.signUpForm.add(this);
+		try {
+			AdminMenu.writeToFile(FindCustomer.signUpForm);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}*/
 	}
 
 	public double getBalance() {
@@ -123,11 +134,11 @@ public class Customer implements Serializable  {
 		this.accountType = accountType;
 	}
 
-	public String getAccStatus() {
+	public Boolean getAccStatus() {
 		return accStatus;
 	}
 
-	public void setAccStatus(String accStatus) {
+	public void setAccStatus(Boolean accStatus) {
 		this.accStatus = accStatus;
 	}
 
@@ -138,6 +149,7 @@ public class Customer implements Serializable  {
 				+ address + ", accNumber=" + accNumber + ", initialDeposit=" + initialDeposit + ", balance=" + balance
 				+ "]";
 	}
+
 
 	
 	}

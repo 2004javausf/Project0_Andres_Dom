@@ -36,9 +36,9 @@ public class CustomerForm {
 			
 			
 			System.out.println("Please create your profile.");
-			System.out.println("Account type 1)For Single account");
-			System.out.println("Account type 2)For Joint account");
-			System.out.println("3)To go back to the previous menu");
+			System.out.println("[1] For Single account");
+			System.out.println("[2] For Joint account");
+			System.out.println("[3] To go back to the previous menu");
 			int accountType = scan.nextInt();
 			//userValues.setAccountType(accountType);
 			
@@ -51,7 +51,8 @@ public class CustomerForm {
 			break;
 			
 			case 2: 
-				System.out.println("Sorry we are in maintainance");
+				System.out.println("This feature is under review due to unresolved merging conflicts this morning."
+						+ " Please try back later.\n");
 			break;
 			case 3: 
 				CustomerMenu.customerMenuMethod();
@@ -65,7 +66,7 @@ public class CustomerForm {
 			
 			
 			
-	        //creating folder to store arraList information
+	        //creating folder to store arrayList information
 			
 			FileWriter writer = null;
 			try {
@@ -101,29 +102,37 @@ public class CustomerForm {
 		}
 		
 		public static void lookCustomer() {
-			System.out.println("You need to complete one form");
+			System.out.println("You need to complete one form\n");
 			///loop to validate the number of forms
 			//while(accountType == "1"); {
-			System.out.println("Insert Full Name: ");
+			System.out.println("Enter Full Name: ");
 			String customerName = scan.next();
 			userValues.setCustomerName(customerName);
 			
-			System.out.println("Insert address: ");
+			System.out.println("Enter address: ");
 			String address = scan.next();
 			userValues.setAddress(address);
 			
-			System.out.println("Insert phone number: ");
+			System.out.println("Enter phone number: ");
 			String phoneNumber = scan.next();
 			userValues.setPhoneNumber(phoneNumber);
 			
-			System.out.println("Insert user name: ");
+			System.out.println("Create a username: ");
 			String userName = scan.next();
 			userValues.setUserName(userName);
 			
-			System.out.println("Insert password: ");
+			System.out.println("Create a password: ");
 			String password = scan.next();
 			userValues.setPassword(password);
 			
+			System.out.println("What is your initial deposit? ");
+			double initialDeposit = scan.nextDouble();
+			userValues.setInitialDeposit(initialDeposit);
+			
+			userValues.setBalance(initialDeposit);
+			userValues.setAccNumber(phoneNumber);
+			userValues.setAccountType("Single");
+			//userValues.setAccStatus(false);
 			//System.out.println("Insert password: ");
 			userValues.setAccStatus(value);
 			
@@ -135,10 +144,10 @@ public class CustomerForm {
 			for (int i = 0; i < signUpForm.size(); i++)  {
 	            System.out.println(signUpForm.get(i) + " ");         
 			}
-			System.out.println(userValues.getAccStatus() + " ");
+			//System.out.println(userValues.getAccStatus() + " ");
 			
 			System.out.println("=================================================");
-			System.out.println("Thank you, Wait for your account to be approved.");
+			System.out.println("Thank you. Your account to be approved in 24hrs.");
 			System.out.println("=================================================");
 		}
 		
@@ -154,8 +163,8 @@ public class CustomerForm {
 				}
 				
 				System.out.println("Would you like to approve this account?");
-				System.out.println("1)  Yes");
-				System.out.println("2)  No");
+				System.out.println("[1]  Yes");
+				System.out.println("[2]  No");
 				int op = o.nextInt();
 				
 				if(op == 1) {

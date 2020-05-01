@@ -1,6 +1,7 @@
 package com.revature.menu;
 
 import com.revature.beans.*;
+import com.revature.driver.MainMenu;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -10,7 +11,7 @@ import java.util.Scanner;
 
 public class BankAccount {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void bankAccount() throws FileNotFoundException {
 		
 		List<String> bankUsers = new ArrayList<>();
 		
@@ -26,7 +27,7 @@ public class BankAccount {
         // Load ArrayList with existing users
         accData.setAccNumber("0001");
         accData.setAccountType("Joint");
-        accData.setAccStatus("Pending");
+        accData.setAccStatus(true);
         accData.setCustomerName("Dom");
         accData.setAddress("MI");
         accData.setInitialDeposit(37.23);
@@ -94,6 +95,7 @@ public class BankAccount {
                     break;
               case 4:
                     quit = true;
+                    CustomerMenu.customerMenuMethod();
                     break;
               default:
                     System.out.println("Please select one of the options above");
