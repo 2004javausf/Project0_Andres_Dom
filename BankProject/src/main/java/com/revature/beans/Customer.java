@@ -18,19 +18,22 @@ public class Customer implements Serializable  {
 	private String userName;
 	private String password;
 	private String accountType;
-	private Boolean accStatus;
+	private String accStatus;
 	private String address;
+	private String accNumber;
+	private double initialDeposit;
+	private double balance;
 	
 
 	
 	public void profileInfo(){
 		
 		FindCustomer.signUpForm.add(this);
-		//AdminMenu.writeToFile(FindCustomer.signUpForm);
+		AdminMenu.writeToFile(FindCustomer.signUpForm);
 	}
 	
 	public void profileInfo(String customerName, String address, String phoneNumber, String userName, 
-			String password, String accountType, Boolean accStatus) {
+			String password, String accountType, String accStatus, String accNumber, double initialDeposit, double balance) {
 		
 		this.customerName=customerName;
 		this.address=address;
@@ -39,8 +42,37 @@ public class Customer implements Serializable  {
 		this.password=password;
 		this.accountType=accountType;
 		this.accStatus=accStatus;
+		this.accNumber=accNumber;
+		this.initialDeposit=initialDeposit;
+		this.balance=initialDeposit;
+		
 		FindCustomer.signUpForm.add(this);
-		//AdminMenu.writeToFile(FindCustomer.signUpForm);
+		AdminMenu.writeToFile(FindCustomer.signUpForm);
+	}
+
+	public double getBalance() {
+		return balance;
+	}
+
+	public void setBalance(double balance) {
+		this.balance = initialDeposit;
+	}
+
+	
+	public String getAccNumber() {
+		return accNumber;
+	}
+
+	public void setAccNumber(String accNumber) {
+		this.accNumber = accNumber;
+	}
+
+	public double getInitialDeposit() {
+		return initialDeposit;
+	}
+
+	public void setInitialDeposit(double initialDeposit) {
+		this.initialDeposit = initialDeposit;
 	}
 
 	public String getCustomerName() {
@@ -91,20 +123,22 @@ public class Customer implements Serializable  {
 		this.accountType = accountType;
 	}
 
-	public Boolean getAccStatus() {
+	public String getAccStatus() {
 		return accStatus;
 	}
 
-	public void setAccStatus(Boolean accStatus) {
+	public void setAccStatus(String accStatus) {
 		this.accStatus = accStatus;
 	}
 
 	@Override
 	public String toString() {
-		return "Customer Information [customerName=" + customerName + ", address=" + address + ", phoneNumber=" + phoneNumber + ", userName=" + userName
-				+ ", password=" + password + ", accStatus=" + accStatus + "]";
+		return "Customer [customerName=" + customerName + ", phoneNumber=" + phoneNumber + ", userName=" + userName
+				+ ", password=" + password + ", accountType=" + accountType + ", accStatus=" + accStatus + ", address="
+				+ address + ", accNumber=" + accNumber + ", initialDeposit=" + initialDeposit + ", balance=" + balance
+				+ "]";
+	}
+
+	
 	}
 	
-		
-	
-}
