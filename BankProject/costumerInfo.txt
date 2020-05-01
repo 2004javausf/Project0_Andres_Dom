@@ -1,1 +1,1 @@
-Customer [customerName=eth, phoneNumber=teh, userName=yh, password=y, accountType=Single, accStatus=false, address=eth, accNumber=teh, initialDeposit=23.0, balance=23.0]
+Customer [customerName=aa, phoneNumber=aa, userName=aa, password=aa, accountType=Single, accStatus=false, address=aa, accNumber=aa, initialDeposit=10.0, balance=10.0]

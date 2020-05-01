@@ -53,7 +53,8 @@ public class BankAccount {
               System.out.println("[1] Deposit money");
               System.out.println("[2] Withdraw money");
               System.out.println("[3] Check balance");
-              System.out.print("[4] Quit: \n");
+              System.out.println("[4] Main Menu");
+              System.out.print("[5] Exit \n");
               customerOption = in.nextInt();
               
               switch (customerOption) {
@@ -97,11 +98,15 @@ public class BankAccount {
                     quit = true;
                     CustomerMenu.customerMenuMethod();
                     break;
-              default:
-                    System.out.println("Please select one of the options above");
-                    break;
-              }
-              System.out.println();
+              case 5:
+                       System.out.println("THATS ALL FOLKS\n\n");
+            break;
+        
+      default:
+            System.out.println("Please select one of the options above");
+            break;
+      }
+             
         } while (!quit);
         System.out.println("Bye!");
   }

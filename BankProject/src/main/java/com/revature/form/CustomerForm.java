@@ -170,7 +170,8 @@ public class CustomerForm {
 				if(op == 1) {
 					value = true;
 					userValues.setAccStatus(value);
-					System.out.println(userValues.getAccStatus() + " ");
+					System.out.println("Account: "+ userValues.getAccNumber() + " has been APPROVED!");
+					
 				}
 				if (op == 2) {
 					value = false;
