@@ -1,2 +1,1 @@
-Customer Information [customerName=Andres, address=Miami, phoneNumber=3054679581, userName=andresap, password=12345, accStatus=false]
- a p p r o v e d   a c c o u n t
+Customer Information [customerName=th, address=seth, phoneNumber=seth, userName=seth, password=esth, accStatus=false]

@@ -12,7 +12,8 @@ import com.revature.driver.MainMenuClass;
 import com.revature.form.CustomerForm;
 
 
-public class AdminMenu  {
+public class EmployeeMenuManager {
+
 	//public static ArrayList<CustomerForm> values = new ArrayList<CustomerForm>();
 	
 	public static void manageCustomers() throws FileNotFoundException  {
@@ -24,7 +25,7 @@ public class AdminMenu  {
 		
 		System.out.println("1)View Customer Info");
 		System.out.println("2)View Pending Accounts");
-		System.out.println("3)Change Customer Information");
+		//System.out.println("3)Change Customer Information");
 		
 		Scanner scan = new Scanner(System.in);
 		String op = scan.nextLine();
@@ -38,14 +39,14 @@ public class AdminMenu  {
 		break;
 		
 		
-		case "3":
+		/*case "3":
 			try {
 				writeToFile(null);
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		break;
+		break;*/
 			
 		
 		
